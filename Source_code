@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+
+namespace Binery_Code
+{
+    class Program
+    {
+        // Mohammad Madadkhani 
+        // You can change this algorithm and right beter
+        // this code is for student
+        static void Main(string[] args)
+        {
+            Console.WriteLine("");
+            Console.WriteLine(" Please enter your integer: ");
+            Console.WriteLine("");
+            Thread.Sleep(700);
+
+            int[] num = new int[3];
+            int i, j, min = 0, max = 0, counter = 0, count = 0;
+
+            for (j = 0; j < 3; j++)
+            {
+                count++;
+                Thread.Sleep(500);
+                Console.Write(" your integer number " + count + ": ");
+                num[j] = int.Parse(Console.ReadLine());
+            }
+
+            for (i = 0; i < num.Length - 1; i++)
+            {
+                if (num[i] < num[i + 1])
+                {
+                    if (num[i] < min || counter == 0)
+                        min = num[i];
+                        counter++;
+                    if (num[i + 1] > max)
+                        max = num[i + 1];
+                }
+                else
+                {
+                    if (num[i] > max)
+                        max = num[i];
+                    if (num[i + 1] < min || counter == 0)
+                        min = num[i + 1];
+                    counter++;
+                }
+            }
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("");
+            Thread.Sleep(750);
+            Console.WriteLine("     Min ==> " + min);
+            Thread.Sleep(500);
+            Console.WriteLine("     Max ==> " + max);
+
+            Console.ReadKey();
+        }
+        
+           
+        }
+    }
