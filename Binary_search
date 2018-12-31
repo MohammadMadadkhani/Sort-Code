@@ -9,7 +9,7 @@ namespace Binery_Code
     class Program
     {
         // Mohammad Madadkhani 
-        // You can change this algorithm and right beter
+        // You can change this algorithm and right better
         // this code is for student
         static void Main(string[] args)
         {
